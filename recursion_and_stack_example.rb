@@ -36,3 +36,16 @@ puts "-"*40
 puts get_numbers_stack([1,2,3])
 puts get_numbers_stack([1,2,3]).inspect
 puts "-"*40
+
+
+# The idea here is that on each pass of the algorithm we are either taking a number or not taking a number.
+
+# We branch out & try both outcomes so we can produce all the possible combinations.
+
+# Imagine a tree where each leaf is one of the solutions.
+
+# A few things to notice:
+
+# The recursion solution is shorter
+# The actual "making progress" part of the algorithm (index + 1) is almost the same
+# The stack we're using is just an array because there isn't a Stack class in Ruby
