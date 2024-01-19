@@ -8,6 +8,7 @@
 # Let’s look at an example where we want to find out the “Power Set” of a given array. The Power Set is a set of all the subsets that can be created from the array.
 
 def get_numbers(list, index = 0, taken = [])
+  # example with recursion:
   return [taken] if index == list.size
 
   get_numbers(list, index+1, taken) +
@@ -15,6 +16,7 @@ def get_numbers(list, index = 0, taken = [])
 end
 
 def get_numbers_stack(list)
+  # the same problem solved using a stack:
   stack  = [[0, []]]
   output = []
   until stack.empty?
